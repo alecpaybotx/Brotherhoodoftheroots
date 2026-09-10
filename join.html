@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Men's Council | Brotherhood of the Roots</title>
+  <title>Join Now | Brotherhood of the Roots</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
 
@@ -20,7 +20,7 @@
     .nav-links a:hover{color:var(--sage)}
     .nav-cta{background:var(--forest)!important;color:var(--white)!important;padding:10px 24px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
     .nav-cta:hover{background:var(--moss)!important}
-    .btn{display:inline-block;padding:14px 36px;font-size:12px;letter-spacing:.14em;font-weight:500;text-decoration:none;border-radius:2px;transition:all .2s;font-family:'Jost',sans-serif}
+    .btn{display:inline-block;padding:14px 36px;font-size:12px;letter-spacing:.14em;font-weight:500;text-decoration:none;border-radius:2px;transition:all .2s;font-family:'Jost',sans-serif;border:none;cursor:pointer}
     .btn-gold{background:var(--gold);color:var(--forest)}
     .btn-gold:hover{background:#b8952e}
     .btn-dark{background:var(--forest);color:var(--cream)}
@@ -50,25 +50,35 @@
       .footer-bottom{flex-direction:column;gap:10px;text-align:center}
     }
 
-
-    .page-hero{min-height:52vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+    .page-hero{min-height:38vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
     .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
-    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,15,.3) 0%,rgba(15,28,15,.85) 100%)}
-    .page-hero-content{position:relative;z-index:2;padding:0 48px 64px;max-width:1100px;margin:0 auto;width:100%}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,15,.35) 0%,rgba(15,28,15,.88) 100%)}
+    .page-hero-content{position:relative;z-index:2;padding:0 48px 56px;max-width:1100px;margin:0 auto;width:100%}
     .page-eyebrow{font-size:10px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;display:block}
-    .page-hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,72px);font-weight:300;color:var(--cream);line-height:1.1}
+    .page-hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,64px);font-weight:300;color:var(--cream);line-height:1.1}
     .page-hero-content h1 em{font-style:italic;color:var(--gold)}
-    .page-body{background:var(--light)}
-    .page-body .section-inner{max-width:780px}
-    .page-body p{font-size:15px;color:#555;line-height:1.9;margin-bottom:22px}
-    .page-body h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:400;color:var(--forest);margin:48px 0 18px;line-height:1.2}
-    .page-body ul{margin:0 0 22px 20px}
-    .page-body ul li{font-size:15px;color:#555;line-height:1.9;margin-bottom:8px}
-    .join-strip{background:var(--forest);text-align:center;padding:72px 48px}
-    .join-strip h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,42px);font-weight:300;color:var(--cream);margin-bottom:24px;font-style:italic}
+    .page-hero-content p{font-size:14px;color:rgba(244,240,230,.78);margin-top:14px;max-width:520px}
     .breadcrumb{font-size:12px;letter-spacing:.06em;color:rgba(244,240,230,.5);margin-bottom:18px;display:block}
     .breadcrumb a{color:var(--gold);text-decoration:none}
     .breadcrumb a:hover{color:var(--cream)}
+    .form-section{background:var(--light)}
+    .form-wrap{max-width:640px;margin:0 auto}
+    .form-note{font-size:14px;color:#666;line-height:1.8;margin-bottom:36px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media(max-width:640px){.form-row{grid-template-columns:1fr}}
+    .field{margin-bottom:22px}
+    .field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);font-weight:500;margin-bottom:8px}
+    .field input,.field textarea{width:100%;padding:13px 16px;border:1px solid #d8d3c8;background:var(--white);font-family:'Jost',sans-serif;font-size:14px;color:var(--body);border-radius:2px;transition:border-color .2s}
+    .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+    .field textarea{resize:vertical;min-height:140px;line-height:1.7}
+    .field small{display:block;margin-top:6px;font-size:12px;color:#888}
+    .submit-row{margin-top:8px}
+    .alt-contact{margin-top:44px;padding-top:32px;border-top:1px solid #e0dccf;font-size:14px;color:#666;line-height:1.9}
+    .alt-contact a{color:var(--sage);text-decoration:none;font-weight:500}
+    .alt-contact a:hover{color:var(--gold)}
+    .form-status{display:none;margin-top:20px;padding:14px 18px;border-radius:2px;font-size:14px}
+    .form-status.success{background:#e8f0e4;color:#2d4a2d;display:block}
+    .form-status.error{background:#f5e4e0;color:#8a3324;display:block}
 
   </style>
 </head>
@@ -86,38 +96,63 @@
   </ul>
 </nav>
 <section class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('images/index-4.jpg')"></div>
+  <div class="page-hero-bg" style="background-image:url('images/index-2.jpg')"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
-    <span class="breadcrumb"><a href="index.html">Home</a> / Men's Council</span>
+    <span class="breadcrumb"><a href="index.html">Home</a> / Join Now</span>
     <span class="page-eyebrow">Brotherhood of the Roots</span>
-    <h1>Men's <em>Council</em></h1>
+    <h1>Join the <em>Brotherhood</em></h1>
+    <p>Tell us a bit about yourself and we'll be in touch about next steps.</p>
   </div>
 </section>
 
-<section class="page-body">
-  <div class="section-inner">
-    <div class="gold-rule" style="margin:0 0 36px 0"></div>
-    <p>A sanctuary of ritual and consistency where "iron sharpens iron." We hold one another accountable to align our words with our actions, repotentizing our word as our bond through radical ownership.</p>
-    <h2>What to expect</h2>
-    <p>Men's Council is a regular gathering space built on truth-telling, accountability, and deep brotherhood. We sit in circle, we speak honestly, and we hold each other to the standard we've each committed to.</p>
-    <ul>
-      <li>Regular council gatherings in a structured, held container</li>
-      <li>Somatic and embodiment practices</li>
-      <li>Accountability structures and brotherhood bonds</li>
-      <li>Mentorship from experienced facilitators</li>
-    </ul>
-    <h2>Who this is for</h2>
-    <p>Men who are ready to stop performing and start showing up. Men who want to be known — truly known — by other men. Men who are done going it alone.</p>
-    <a href="join.html" class="btn btn-dark" style="margin-top:16px">Join Now</a>
+<section class="form-section">
+  <div class="section-inner form-wrap">
+    <div class="gold-rule" style="margin:0 0 28px 0"></div>
+    <p class="form-note">Fill out the form below to start your journey with us. We read every application personally, take your time and share as much as feels right.</p>
+
+    <form id="join-form" action="https://formspree.io/brotherhoodoftheroots@gmail.com" method="POST">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required/>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required/>
+        </div>
+        <div class="field">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" name="birthday" required/>
+        </div>
+      </div>
+      <div class="field">
+        <label for="location">City &amp; State you live in</label>
+        <input type="text" id="location" name="location" placeholder="e.g. Boulder, CO" required/>
+      </div>
+      <div class="field">
+        <label for="about">What do you want us to know about you? What is your experience in men's work and stepping into a space like this?</label>
+        <textarea id="about" name="about" required></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="New Join the Brotherhood submission"/>
+      <div class="submit-row">
+        <button type="submit" class="btn btn-gold">Submit Application</button>
+      </div>
+      <div id="form-status" class="form-status"></div>
+    </form>
+
+    <div class="alt-contact">
+      <p>Prefer to connect a different way? Email us at <a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a>, message us on <a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank">Instagram @brotherhoodoftheroots</a>, or <a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank">join our WhatsApp community</a>.</p>
+    </div>
   </div>
 </section>
 
-<section class="join-strip">
-  <div class="gold-rule"></div>
-  <h2>Root, Rise, and Remember with us</h2>
-  <a href="join.html" class="btn btn-gold">Get Started</a>
-</section>
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -148,5 +183,36 @@
     <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram &nearr;</a>
   </div>
 </footer>
+
+<script>
+  const form = document.getElementById('join-form');
+  const status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if(response.ok){
+        form.reset();
+        status.textContent = "Thank you, your application has been received. We'll be in touch soon.";
+        status.className = 'form-status success';
+      } else {
+        response.json().then(function(json){
+          status.textContent = (json.errors ? json.errors.map(function(e){return e.message}).join(', ') : "Something went wrong. Please email us directly at brotherhoodoftheroots@gmail.com.");
+          status.className = 'form-status error';
+        }).catch(function(){
+          status.textContent = "Something went wrong. Please email us directly at brotherhoodoftheroots@gmail.com.";
+          status.className = 'form-status error';
+        });
+      }
+    }).catch(function(){
+      status.textContent = "Something went wrong. Please email us directly at brotherhoodoftheroots@gmail.com.";
+      status.className = 'form-status error';
+    });
+  });
+</script>
 </body>
 </html>

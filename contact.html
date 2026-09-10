@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Men's Council | Brotherhood of the Roots</title>
+  <title>Contact | Brotherhood of the Roots</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
 
@@ -50,25 +50,28 @@
       .footer-bottom{flex-direction:column;gap:10px;text-align:center}
     }
 
-
-    .page-hero{min-height:52vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+    .page-hero{min-height:38vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
     .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
-    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,15,.3) 0%,rgba(15,28,15,.85) 100%)}
-    .page-hero-content{position:relative;z-index:2;padding:0 48px 64px;max-width:1100px;margin:0 auto;width:100%}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,15,.35) 0%,rgba(15,28,15,.88) 100%)}
+    .page-hero-content{position:relative;z-index:2;padding:0 48px 56px;max-width:1100px;margin:0 auto;width:100%}
     .page-eyebrow{font-size:10px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;display:block}
-    .page-hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,72px);font-weight:300;color:var(--cream);line-height:1.1}
+    .page-hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,64px);font-weight:300;color:var(--cream);line-height:1.1}
     .page-hero-content h1 em{font-style:italic;color:var(--gold)}
-    .page-body{background:var(--light)}
-    .page-body .section-inner{max-width:780px}
-    .page-body p{font-size:15px;color:#555;line-height:1.9;margin-bottom:22px}
-    .page-body h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:400;color:var(--forest);margin:48px 0 18px;line-height:1.2}
-    .page-body ul{margin:0 0 22px 20px}
-    .page-body ul li{font-size:15px;color:#555;line-height:1.9;margin-bottom:8px}
-    .join-strip{background:var(--forest);text-align:center;padding:72px 48px}
-    .join-strip h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,42px);font-weight:300;color:var(--cream);margin-bottom:24px;font-style:italic}
+    .page-hero-content p{font-size:14px;color:rgba(244,240,230,.78);margin-top:14px;max-width:520px}
     .breadcrumb{font-size:12px;letter-spacing:.06em;color:rgba(244,240,230,.5);margin-bottom:18px;display:block}
     .breadcrumb a{color:var(--gold);text-decoration:none}
     .breadcrumb a:hover{color:var(--cream)}
+    .contact-section{background:var(--light)}
+    .contact-intro{max-width:640px;margin:0 auto 56px;text-align:center}
+    .contact-intro p{font-size:15px;color:#555;line-height:1.9}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#e8e4dc;max-width:1000px;margin:0 auto}
+    .contact-card{background:var(--white);padding:44px 32px;text-align:center}
+    .contact-card .icon{width:48px;height:48px;border-radius:50%;background:var(--forest);color:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:18px}
+    .contact-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--forest);margin-bottom:10px}
+    .contact-card a{font-size:14px;color:var(--sage);text-decoration:none;word-break:break-word}
+    .contact-card a:hover{color:var(--gold)}
+    .contact-card p{font-size:13px;color:#777;margin-top:8px}
+    @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
 
   </style>
 </head>
@@ -86,38 +89,48 @@
   </ul>
 </nav>
 <section class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('images/index-4.jpg')"></div>
+  <div class="page-hero-bg" style="background-image:url('images/index-3.jpg')"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
-    <span class="breadcrumb"><a href="index.html">Home</a> / Men's Council</span>
+    <span class="breadcrumb"><a href="index.html">Home</a> / Contact</span>
     <span class="page-eyebrow">Brotherhood of the Roots</span>
-    <h1>Men's <em>Council</em></h1>
+    <h1>Get in <em>Touch</em></h1>
+    <p>We'd love to hear from you. Reach out through whichever way feels easiest.</p>
   </div>
 </section>
 
-<section class="page-body">
+<section class="contact-section">
   <div class="section-inner">
-    <div class="gold-rule" style="margin:0 0 36px 0"></div>
-    <p>A sanctuary of ritual and consistency where "iron sharpens iron." We hold one another accountable to align our words with our actions, repotentizing our word as our bond through radical ownership.</p>
-    <h2>What to expect</h2>
-    <p>Men's Council is a regular gathering space built on truth-telling, accountability, and deep brotherhood. We sit in circle, we speak honestly, and we hold each other to the standard we've each committed to.</p>
-    <ul>
-      <li>Regular council gatherings in a structured, held container</li>
-      <li>Somatic and embodiment practices</li>
-      <li>Accountability structures and brotherhood bonds</li>
-      <li>Mentorship from experienced facilitators</li>
-    </ul>
-    <h2>Who this is for</h2>
-    <p>Men who are ready to stop performing and start showing up. Men who want to be known — truly known — by other men. Men who are done going it alone.</p>
-    <a href="join.html" class="btn btn-dark" style="margin-top:16px">Join Now</a>
+    <div class="gold-rule"></div>
+    <div class="contact-intro">
+      <p>Questions about our councils, retreats, or facilitation training? Curious about joining the brotherhood? Send us a message any of the ways below and we'll get back to you personally.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">@</div>
+        <h3>Email</h3>
+        <a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a>
+        <p>We read every message.</p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">IG</div>
+        <h3>Instagram</h3>
+        <a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank">@brotherhoodoftheroots</a>
+        <p>Follow along and send a DM.</p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">WA</div>
+        <h3>WhatsApp</h3>
+        <a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank">Join our community chat</a>
+        <p>Connect directly with the brotherhood.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:56px">
+      <a href="join.html" class="btn btn-dark">Ready to join? Apply here</a>
+    </div>
   </div>
 </section>
 
-<section class="join-strip">
-  <div class="gold-rule"></div>
-  <h2>Root, Rise, and Remember with us</h2>
-  <a href="join.html" class="btn btn-gold">Get Started</a>
-</section>
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
