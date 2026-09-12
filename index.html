@@ -20,6 +20,8 @@
     .nav-links a:hover{color:var(--sage)}
     .nav-cta{background:var(--forest)!important;color:var(--white)!important;padding:10px 24px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
     .nav-cta:hover{background:var(--moss)!important}
+    .nav-donate{background:transparent!important;color:var(--forest)!important;border:1.5px solid var(--gold)!important;padding:9px 22px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
+    .nav-donate:hover{background:var(--gold)!important;color:var(--white)!important}
     .btn{display:inline-block;padding:14px 36px;font-size:12px;letter-spacing:.14em;font-weight:500;text-decoration:none;border-radius:2px;transition:all .2s;font-family:'Jost',sans-serif}
     .btn-gold{background:var(--gold);color:var(--forest)}
     .btn-gold:hover{background:#b8952e}
@@ -70,7 +72,13 @@
     .roots-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:300;color:var(--cream);margin-bottom:28px;font-style:italic}
     .programs-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,42px);font-weight:400;color:var(--forest);text-align:center;margin-bottom:56px}
     .programs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#e8e4dc}
-    .program-card{background:var(--white);padding:48px 40px;border-left:3px solid transparent;transition:border-color .2s,background .2s}
+    .program-card{background:var(--white);padding:48px 40px;border-left:3px solid transparent;transition:border-color .2s,background .2s;position:relative}
+    .card-cover{position:absolute;inset:0;z-index:0}
+    .program-card h3 a{position:relative;z-index:1}
+    .program-card .learn{position:relative;z-index:1;display:inline-block}
+    .program-card.has-photo{display:flex;align-items:center;gap:28px}
+    .program-card.has-photo .card-photo{width:120px;height:120px;border-radius:4px;object-fit:cover;flex-shrink:0;position:relative;z-index:1}
+    @media(max-width:768px){.program-card.has-photo{flex-direction:column;align-items:flex-start}}
     .program-card:hover{border-left-color:var(--gold);background:var(--light)}
     .program-card h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--forest);margin-bottom:14px}
     .program-card h3 a{color:inherit;text-decoration:none;transition:color .2s}
@@ -122,7 +130,8 @@
     <li><a href="index.html#programs">Programs</a></li>
     <li><a href="index.html#testimonials">Stories</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="join.html" class="nav-cta">Join Now</a></li>
+    <li><a href="join.html" class="nav-cta">Get Connected</a></li>
+    <li><a href="donate.html" class="nav-donate">Donate</a></li>
   </ul>
 </nav>
 <section class="hero">
@@ -153,7 +162,6 @@
   <div class="section-inner">
     <div class="gold-rule"></div>
     <h2>Root, Rise, and Remember with us</h2>
-    <a href="join.html" class="btn btn-outline" style="margin-top:4px">Learn more</a>
   </div>
 </section>
 
@@ -165,26 +173,22 @@
         <h3><a href="mens-council.html">Men's Council</a></h3>
         <p>A sanctuary of ritual and consistency where "iron sharpens iron." We hold one another accountable to align our words with our actions, repotentizing our word as our bond through radical ownership.</p>
         <a href="mens-council.html" class="learn">Learn more &rarr;</a>
+        <a href="mens-council.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
       <div class="program-card">
-        <h3><a href="coed-council.html">Co-Ed Council</a></h3>
+        <h3><a href="coed-council.html">Way of We Co-Ed Events</a></h3>
         <p>Brotherhood serves as the medicine to integrate the sacred masculine with the feminine essence. We gather with our sisters to flourish as a communal hub honoring this connection.</p>
         <a href="coed-council.html" class="learn">Learn more &rarr;</a>
+        <a href="coed-council.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
-      <div class="program-card">
-        <h3><a href="retreats.html">Multi-Day Retreats</a></h3>
-        <p>Stepping away to remember our roots. These immersions are designed for deep integration — where "man softens man" through direct experience with the land, ancient wisdom, and the fire of devotion.</p>
-        <a href="retreats.html" class="learn">Learn more &rarr;</a>
-      </div>
-      <div class="program-card">
-        <h3><a href="facilitation-training.html">Facilitation Training</a></h3>
-        <p>World leading experts in the Men's Work industry come together with BOTR leaders and men devoted to learning the tools, processes, and trauma-informed understanding on how to safely facilitate this work in a sacred and powerful way.</p>
-        <a href="facilitation-training.html" class="learn">Click here to learn more &rarr;</a>
-      </div>
-      <div class="program-card">
-        <h3><a href="the-holder.html">Mens Work Facilitation Training</a></h3>
-        <p>Become the facilitator people trust in the moments that matter most. An elevated, experiential training with Uncle Matoksa for those ready to deepen their capacity to hold transformational space.</p>
-        <a href="the-holder.html" class="learn">Learn more &rarr;</a>
+      <div class="program-card has-photo">
+        <div>
+          <h3><a href="the-holder.html">Mens Work Facilitation Training</a></h3>
+          <p>Become the facilitator people trust in the moments that matter most. An elevated, experiential training with Uncle Matoksa for those ready to deepen their capacity to hold transformational space.</p>
+          <a href="the-holder.html" class="learn">Learn more &rarr;</a>
+        </div>
+        <img src="images/the-holder-2.png" alt="Uncle Matoksa" class="card-photo"/>
+        <a href="the-holder.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
     </div>
   </div>
@@ -218,6 +222,21 @@
       <a href="coed-council.html" class="gallery-link"></a>
       <div class="gallery-caption">Co-Ed Council</div>
     </div>
+    <div class="gallery-item">
+      <img src="images/index-8.jpg" alt="Facilitation Training with Elders"/>
+      <a href="facilitation-training.html" class="gallery-link"></a>
+      <div class="gallery-caption">Facilitation Training with Elders</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/index-10.jpg" alt="Nourishment"/>
+      <a href="the-holder.html" class="gallery-link"></a>
+      <div class="gallery-caption">Nourishment</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/index-2.jpg" alt="Remember"/>
+      <a href="index.html" class="gallery-link"></a>
+      <div class="gallery-caption">Remember</div>
+    </div>
   </div>
 </section>
 
@@ -227,14 +246,14 @@
     <h2>What our Brothers and Sisters are saying</h2>
     <div class="t-grid">
       <div class="t-card">
-        <img src="images/index-1.png" alt="Alec R"/>
-        <blockquote>"It was difficult for me to open up at first, but the brotherhood held space in a way I had never experienced before."</blockquote>
-        <cite>Alec R</cite><span class="role">Small Business Owner</span>
-      </div>
-      <div class="t-card">
         <img src="images/index-1.png" alt="Ahva"/>
         <blockquote>"As I stepped into this community, I found parts of myself I didn't know were missing."</blockquote>
-        <cite>Ahva</cite><span class="role">Executive</span>
+        <cite>Ahva</cite><span class="role">Rhythm Sanctuary founder</span>
+      </div>
+      <div class="t-card">
+        <img src="images/index-1.png" alt="Joshua Miller"/>
+        <blockquote>"Going to the Brotherhood of the Roots has been very valuable for me continuing my journey through Men's work, giving me a place to practice what I've already learned and discover more that is new. Having a place where I can be seen and bring my happiness, sadness, or anger and know that the Brotherhood can hold it, and keep it in the Circle is powerful. Trust the process and be yourself."</blockquote>
+        <cite>Joshua Miller</cite>
       </div>
       <div class="t-card">
         <img src="images/index-1.png" alt="Jacob F"/>
@@ -252,7 +271,7 @@
     <div class="gold-rule"></div>
     <h2>Join the Brotherhood</h2>
     <p>We'll be with you every step of the way.</p>
-    <a href="join.html" class="btn btn-gold">Join Now</a>
+    <a href="join.html" class="btn btn-gold">Claim your seat</a>
     <p style="margin-top:22px;margin-bottom:0"><a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank" style="color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.05em">Prefer WhatsApp? Join our community chat &rarr;</a></p>
   </div>
 </section>
