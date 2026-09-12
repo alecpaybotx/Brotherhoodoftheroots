@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate | Brotherhood of the Roots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--forest:#1a2e1a;--moss:#2d4a2d;--sage:#4a6741;--gold:#c9a84c;--cream:#f4f0e6;--white:#ffffff;--body:#2a2a2a;--light:#f8f6f1}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;font-weight:300;color:var(--body);background:var(--white);line-height:1.7}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,0.06)}
+    .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nav-brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4)}
+    .nav-brand span{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:.04em;color:var(--forest)}
+    .nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+    .nav-links a{font-size:13px;font-weight:400;letter-spacing:.08em;color:var(--body);text-decoration:none;transition:color .2s}
+    .nav-links a:hover{color:var(--sage)}
+    .nav-cta{background:var(--forest)!important;color:var(--white)!important;padding:10px 24px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
+    .nav-cta:hover{background:var(--moss)!important}
+    .nav-donate{background:transparent!important;color:var(--forest)!important;border:1.5px solid var(--gold)!important;padding:9px 22px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
+    .nav-donate:hover{background:var(--gold)!important;color:var(--white)!important}
+    .btn{display:inline-block;padding:14px 36px;font-size:12px;letter-spacing:.14em;font-weight:500;text-decoration:none;border-radius:2px;transition:all .2s;font-family:'Jost',sans-serif}
+    .btn-gold{background:var(--gold);color:var(--forest)}
+    .btn-gold:hover{background:#b8952e}
+    .btn-dark{background:var(--forest);color:var(--cream)}
+    .btn-dark:hover{background:var(--moss)}
+    .btn-outline{border:1px solid rgba(244,240,230,.5);color:var(--cream)}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    section{padding:100px 48px}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .gold-rule{width:48px;height:2px;background:var(--gold);margin:0 auto 32px}
+    footer{background:var(--forest);padding:64px 48px;color:rgba(244,240,230,.6)}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
+    .footer-brand img{width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:14px;display:block;border:1px solid rgba(201,168,76,.4)}
+    .footer-brand h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--cream);margin-bottom:12px}
+    .footer-brand p{font-size:13px;line-height:1.8;max-width:280px}
+    .footer-col h4{font-size:10px;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;text-transform:uppercase}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:13px;color:rgba(244,240,230,.6);text-decoration:none;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--gold)}
+    .footer-bottom{max-width:1100px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(244,240,230,.1);display:flex;justify-content:space-between;align-items:center;font-size:12px}
+    .ig-link{color:var(--gold);text-decoration:none}
+    .ig-link:hover{color:var(--cream)}
+    @media(max-width:768px){
+      nav{padding:0 20px}.nav-links{display:none}
+      section{padding:72px 24px}
+      .footer-inner{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+    }
+
+    .page-hero{min-height:42vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+    .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,15,.35) 0%,rgba(15,28,15,.88) 100%)}
+    .page-hero-content{position:relative;z-index:2;padding:0 48px 56px;max-width:1100px;margin:0 auto;width:100%}
+    .page-eyebrow{font-size:10px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;display:block}
+    .page-hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,64px);font-weight:300;color:var(--cream);line-height:1.1}
+    .page-hero-content h1 em{font-style:italic;color:var(--gold)}
+    .page-hero-content p{font-size:14px;color:rgba(244,240,230,.78);margin-top:14px;max-width:520px}
+    .breadcrumb{font-size:12px;letter-spacing:.06em;color:rgba(244,240,230,.5);margin-bottom:18px;display:block}
+    .breadcrumb a{color:var(--gold);text-decoration:none}
+    .breadcrumb a:hover{color:var(--cream)}
+    .page-body{background:var(--light)}
+    .page-body .section-inner{max-width:720px}
+    .page-body p{font-size:15px;color:#555;line-height:1.9;margin-bottom:22px}
+    .page-body h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:400;color:var(--forest);margin:44px 0 18px;line-height:1.2}
+    .donate-block{background:var(--forest);padding:44px 40px;margin:36px 0;text-align:center;border-radius:4px}
+    .donate-block p{color:rgba(244,240,230,.8);font-size:14px;margin-bottom:24px}
+    .donate-note{margin-top:44px;padding-top:28px;border-top:1px solid #e0dccf;font-size:14px;color:#666;line-height:1.9}
+    .donate-note a{color:var(--sage);text-decoration:none;font-weight:500}
+    .donate-note a:hover{color:var(--gold)}
+
+  </style>
+</head>
+<body><nav>
+  <a href="index.html" class="nav-brand">
+    <img src="images/index-1.png" alt="BOTR"/>
+    <span>Brotherhood of the Roots</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#programs">Programs</a></li>
+    <li><a href="index.html#testimonials">Stories</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="join.html" class="nav-cta">Get Connected</a></li>
+    <li><a href="donate.html" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/index-10.jpg')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Donate</span>
+    <span class="page-eyebrow">Brotherhood of the Roots</span>
+    <h1>Support <em>the Work</em></h1>
+    <p>Your gift keeps this container open for the men and women who need it most.</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="section-inner">
+    <div class="gold-rule" style="margin:0 0 36px 0"></div>
+    <p>Every gift you give helps us continue this deep work. Brotherhood of the Roots exists because people show up, hold space, and give what they can so others can do the same. Your donation is a direct investment in that circle staying open.</p>
+    <h2>Where your donation goes</h2>
+    <p>Donations go directly into scholarship support for men who could not otherwise afford to attend. They help cover the cost of our monthly council meetings and fund scholarship spots for our multi day events and trainings, so that no one is turned away because of what is in his wallet.</p>
+    <div class="donate-block">
+      <p>Give directly through Venmo. Every dollar goes back into this work.</p>
+      <a href="https://www.venmo.com/u/OFTHEROOTS" target="_blank" class="btn btn-gold">Give on Venmo</a>
+    </div>
+    <div class="donate-note">
+      <p>Prefer another way to give, or have a question about where funds go? Email us at <a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a> or message us on <a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank">Instagram @brotherhoodoftheroots</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/index-1.png" alt="Brotherhood of the Roots"/>
+      <h3>Brotherhood of the Roots</h3>
+      <p>Empowering men and women in community. Let's Root, Rise, and Remember together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#testimonials">Success Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank" class="ig-link">@brotherhoodoftheroots</a></li>
+        <li><a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a></li>
+        <li><a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank">Join our WhatsApp</a></li>
+        <li><a href="join.html" target="_blank">Get Connected</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Brotherhood of the Roots. All rights reserved.</span>
+    <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram &nearr;</a>
+  </div>
+</footer>
+</body>
+</html>
