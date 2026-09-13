@@ -64,7 +64,6 @@
       .footer-bottom{flex-direction:column;gap:10px;text-align:center}
     }
 
-
     .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
     .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 25%}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,15,.4) 0%,rgba(15,28,15,.72) 100%)}
@@ -98,6 +97,15 @@
     .program-card p{font-size:14px;color:#666;line-height:1.8;margin-bottom:16px}
     .program-card .learn{font-size:12px;letter-spacing:.1em;color:var(--sage);text-decoration:none;font-weight:500;transition:color .2s}
     .program-card .learn:hover{color:var(--gold)}
+    .leaders-preview{background:var(--light)}
+    .leaders-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+    .leader-preview-card{text-align:center;text-decoration:none;display:block}
+    .leader-preview-card img{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:18px;border-radius:2px}
+    .leader-preview-card h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--forest);margin-bottom:6px}
+    .leader-preview-card .role{font-size:12px;letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
+    .leaders-preview .learn-more{display:block;text-align:center;margin-top:44px;font-size:12px;letter-spacing:.1em;color:var(--sage);text-decoration:none;font-weight:500}
+    .leaders-preview .learn-more:hover{color:var(--gold)}
+    @media(max-width:768px){.leaders-preview-grid{grid-template-columns:1fr;gap:28px}}
     .gallery{background:var(--forest);padding:60px 0;overflow:hidden}
     .gallery-header{text-align:center;margin-bottom:32px;padding:0 48px}
     .gallery-header p{font-size:11px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
@@ -142,6 +150,7 @@
   </button>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html#about">About</a></li>
+    <li><a href="leaders.html">Leaders</a></li>
     <li><a href="index.html#programs">Programs</a></li>
     <li><a href="index.html#testimonials">Stories</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -226,6 +235,30 @@
         <a href="the-holder.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="leaders-preview" id="leaders">
+  <div class="section-inner">
+    <h2 class="programs-title">Our Leaders</h2>
+    <div class="leaders-preview-grid">
+      <a href="leaders.html" class="leader-preview-card">
+        <img src="images/leaders-mason.jpg" alt="Mason Mostajo"/>
+        <h3>Mason Mostajo</h3>
+        <span class="role">Co Founder</span>
+      </a>
+      <a href="leaders.html" class="leader-preview-card">
+        <img src="images/leaders-alec.jpg" alt="Alec Vishal Rouben"/>
+        <h3>Alec Vishal Rouben</h3>
+        <span class="role">Co Founder</span>
+      </a>
+      <a href="leaders.html" class="leader-preview-card">
+        <img src="images/leaders-cody.jpg" alt="Cody ThunderEagle Watts"/>
+        <h3>Cody ThunderEagle Watts</h3>
+        <span class="role">Facilitator</span>
+      </a>
+    </div>
+    <a href="leaders.html" class="learn-more">Meet the Leaders &rarr;</a>
   </div>
 </section>
 
@@ -321,6 +354,7 @@
       <h4>Navigate</h4>
       <ul>
         <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="leaders.html">Leaders</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="index.html#testimonials">Success Stories</a></li>
       </ul>
