@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Leaders | Brotherhood of the Roots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--forest:#1a2e1a;--moss:#2d4a2d;--sage:#4a6741;--gold:#c9a84c;--cream:#f4f0e6;--white:#ffffff;--body:#2a2a2a;--light:#f8f6f1}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;font-weight:300;color:var(--body);background:var(--white);line-height:1.7}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,0.06)}
+    .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nav-brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4)}
+    .nav-brand span{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:.04em;color:var(--forest)}
+    .nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+    .nav-links a{font-size:13px;font-weight:400;letter-spacing:.08em;color:var(--body);text-decoration:none;transition:color .2s}
+    .nav-links a:hover{color:var(--sage)}
+    .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;width:36px;height:36px}
+    .nav-toggle span{display:block;width:100%;height:2px;background:var(--forest);border-radius:1px;transition:transform .2s ease,opacity .2s ease}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-cta{background:var(--forest)!important;color:var(--white)!important;padding:10px 24px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
+    .nav-cta:hover{background:var(--moss)!important}
+    .nav-donate{background:transparent!important;color:var(--forest)!important;border:1.5px solid var(--gold)!important;padding:9px 22px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
+    .nav-donate:hover{background:var(--gold)!important;color:var(--white)!important}
+    .btn{display:inline-block;padding:14px 36px;font-size:12px;letter-spacing:.14em;font-weight:500;text-decoration:none;border-radius:2px;transition:all .2s;font-family:'Jost',sans-serif}
+    .btn-gold{background:var(--gold);color:var(--forest)}
+    .btn-gold:hover{background:#b8952e}
+    .btn-dark{background:var(--forest);color:var(--cream)}
+    .btn-dark:hover{background:var(--moss)}
+    section{padding:100px 48px}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .gold-rule{width:48px;height:2px;background:var(--gold);margin:0 auto 32px}
+    footer{background:var(--forest);padding:64px 48px;color:rgba(244,240,230,.6)}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
+    .footer-brand img{width:50px;height:50px;border-radius:50%;object-fit:cover;object-position:center top;margin-bottom:14px;display:block;border:1px solid rgba(201,168,76,.4)}
+    .footer-brand h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--cream);margin-bottom:12px}
+    .footer-brand p{font-size:13px;line-height:1.8;max-width:280px}
+    .footer-col h4{font-size:10px;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;text-transform:uppercase}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:13px;color:rgba(244,240,230,.6);text-decoration:none;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--gold)}
+    .footer-bottom{max-width:1100px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(244,240,230,.1);display:flex;justify-content:space-between;align-items:center;font-size:12px}
+    .ig-link{color:var(--gold);text-decoration:none}
+    .ig-link:hover{color:var(--cream)}
+    @media(max-width:768px){
+      nav{padding:0 20px}
+      .nav-toggle{display:flex}
+      .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 28px;border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 12px 24px rgba(0,0,0,.1);max-height:calc(100vh - 72px);overflow-y:auto}
+      .nav-links.open{display:flex}
+      .nav-links li{width:100%}
+      .nav-links a{display:block;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.05);font-size:14px}
+      .nav-links li:last-child a{border-bottom:none}
+      .nav-cta,.nav-donate{display:inline-block;margin:10px 0 0!important;text-align:center}
+      section{padding:72px 24px}
+      .footer-inner{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+    }
+
+    .leaders-hero{background:var(--forest);text-align:center;padding:180px 48px 90px}
+    .leaders-hero .hero-eyebrow{font-size:11px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
+    .leaders-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,64px);font-weight:300;color:var(--cream);line-height:1.1;margin-bottom:22px}
+    .leaders-hero h1 em{font-style:italic;color:var(--gold)}
+    .leaders-hero p{font-size:15px;color:rgba(244,240,230,.78);max-width:600px;margin:0 auto;line-height:1.9}
+
+    .leader-block{padding:100px 48px}
+    .leader-block:nth-child(even){background:var(--light)}
+    .leader-grid{display:grid;grid-template-columns:340px 1fr;gap:72px;align-items:start;max-width:1100px;margin:0 auto}
+    .leader-block.reverse .leader-grid{grid-template-columns:1fr 340px}
+    .leader-block.reverse .leader-photo{order:2}
+    .leader-photo-frame{position:relative}
+    .leader-photo-frame::after{content:'';position:absolute;inset:-10px -10px 10px 10px;border:1px solid var(--gold);z-index:-1;opacity:.4}
+    .leader-photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--forest)}
+    .leader-photo-placeholder{width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--forest),var(--moss));color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:64px;font-style:italic}
+    .leader-eyebrow{font-size:11px;letter-spacing:.2em;color:var(--sage);text-transform:uppercase;margin-bottom:10px}
+    .leader-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,40px);font-weight:400;color:var(--forest);margin-bottom:4px}
+    .leader-role{font-size:13px;color:var(--gold);letter-spacing:.04em;margin-bottom:22px;display:block}
+    .leader-text p{font-size:15px;color:#555;line-height:1.9;margin-bottom:18px}
+    .leader-text p:last-child{margin-bottom:0}
+    @media(max-width:768px){
+      .leaders-hero{padding:140px 24px 64px}
+      .leader-grid{grid-template-columns:1fr!important;gap:32px}
+      .leader-block.reverse .leader-photo{order:0}
+      .leader-photo-frame{max-width:280px;margin:0 auto}
+    }
+
+  </style>
+</head>
+<body><nav>
+  <a href="index.html" class="nav-brand">
+    <img src="images/index-1.png" alt="Brotherhood of the Roots"/>
+    <span>Brotherhood of the Roots</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="leaders.html">Leaders</a></li>
+    <li><a href="index.html#programs">Programs</a></li>
+    <li><a href="index.html#testimonials">Stories</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="join.html" class="nav-cta">Get Connected</a></li>
+    <li><a href="donate.html" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.getElementById('navLinks');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+})();
+</script>
+
+<section class="leaders-hero">
+  <p class="hero-eyebrow">Brotherhood of the Roots</p>
+  <h1>The <em>Leaders</em></h1>
+  <p>The men holding the container. Each brings a different lineage of study and lived experience to the work, united in service to remembrance, responsibility, and legacy.</p>
+</section>
+
+<section class="leader-block">
+  <div class="leader-grid">
+    <div class="leader-photo-frame leader-photo">
+      <img class="leader-photo" src="images/leaders-mason.jpg" alt="Mason Mostajo"/>
+    </div>
+    <div class="leader-text">
+      <p class="leader-eyebrow">Co Founder</p>
+      <h2>Mason Mostajo</h2>
+      <span class="leader-role">Guardian of Sacred Masculinity</span>
+      <p>With a life devoted to truth, love, and humanity, Mason Mostajo serves as a guardian of sacred masculinity and a keeper of the ceremonial spine. Through deep curiosity, cultivated compassion, and inner alchemy, he moves in sacred service to life and the human spirit. As co founder of Brotherhood of the Roots, Mason leads initiatory spaces for men and co ed communities, shaping culture with a generational lens grounded in remembrance, responsibility, and legacy.</p>
+      <p>Guided by the Rainbow Warrior prophecy and carrying Eagle medicine, he serves as a living bridge between ancestral earth based wisdom and future generations.</p>
+      <p>Shaped by a long standing career in high level sport and years living with chronic pain, Mason initiated a path of self discovery that transmuted injury into insight and suffering into service through mastery of emotional and relational intelligence, paired with ancestral connection to spirit. Through breath, brotherhood, and belonging, Mason catalyzes life force liberation and empowers sovereign embodiment in service to the Most High.</p>
+    </div>
+  </div>
+</section>
+
+<section class="leader-block reverse">
+  <div class="leader-grid">
+    <div class="leader-photo-frame leader-photo">
+      <img class="leader-photo" src="images/leaders-alec.jpg" alt="Alec Vishal Rouben"/>
+    </div>
+    <div class="leader-text">
+      <p class="leader-eyebrow">Co Founder</p>
+      <h2>Alec Vishal Rouben</h2>
+      <span class="leader-role">Love Life</span>
+      <p>With over a decade as a purpose driven entrepreneur and more than 15 years as both student and teacher of yoga, Alec Vishal Rouben stands at the intersection of business, mindfulness, and brotherhood. Rooted in a lifelong study of grounded spirituality, heart coherence, and conscious leadership, he brings the same depth of presence and curiosity to his ventures as he does to the mat of life. Alec's entrepreneurial journey has been guided by service, building communities, businesses, and experiences that uplift others while aligning with integrity and truth.</p>
+      <p>As co founder of Brotherhood of the Roots, Alec invites men to reconnect with purpose, emotional strength, and authentic connection, bridging ancient practices with modern understanding. His work is fueled by a devotion to human nature, tending spaces where men will remember their power, lead themselves with compassion, and live in alignment with their True Self.</p>
+      <p>A teacher of life and student of spirit, Alec embodies the path he teaches, walking with humility, vision, and an unwavering commitment to the collective awakening of brotherhood and humanity. Alec's mantra is LOVE LIFE, and you will be able to feel that in the spectrum he brings through in any circle you are a part of.</p>
+    </div>
+  </div>
+</section>
+
+<section class="leader-block">
+  <div class="leader-grid">
+    <div class="leader-photo-frame leader-photo">
+      <img class="leader-photo" src="images/leaders-cody.jpg" alt="Cody ThunderEagle Watts"/>
+    </div>
+    <div class="leader-text">
+      <p class="leader-eyebrow">Facilitator</p>
+      <h2>Cody ThunderEagle Watts</h2>
+      <span class="leader-role">Clinical Therapist &amp; Group Work Facilitator</span>
+      <p>Cody ThunderEagle Watts is a professional people helper serving as a clinical therapist, university professor, life coach, and group work facilitator. He believes mastery is cultivated through committed practice, a willingness to engage discomfort, and an ever growing capacity for joie de vivre. With over a decade of experience, Cody brings a grounded, integral approach to leadership and personal development.</p>
+      <p>Dancing at the intersection of the profound and the absurd, he creates spaces that are both supportive and challenging. Through a contagious playfulness and hard won wisdom, he invites people to embrace paradox, meet themselves fully, and live in ways that are meaningful, grounded, and in connection with something larger than themselves.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--forest);text-align:center;padding:90px 48px">
+  <div class="section-inner">
+    <div class="gold-rule"></div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:300;color:var(--cream);margin-bottom:28px">Root, Rise, and Remember with us</h2>
+    <a href="join.html" class="btn btn-gold">Join Now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/index-3.jpg" alt="Brotherhood of the Roots"/>
+      <h3>Brotherhood of the Roots</h3>
+      <p>Empowering men and women in community. Let's Root, Rise, and Remember together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="leaders.html">Leaders</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#testimonials">Success Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank" class="ig-link">@brotherhoodoftheroots</a></li>
+        <li><a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a></li>
+        <li><a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank">Join our WhatsApp</a></li>
+        <li><a href="join.html" target="_blank">Join Now</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Brotherhood of the Roots. All rights reserved.</span>
+    <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram &nearr;</a>
+  </div>
+</footer>
+</body>
+</html>
