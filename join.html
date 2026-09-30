@@ -82,8 +82,8 @@
     @media(max-width:640px){.form-row{grid-template-columns:1fr}}
     .field{margin-bottom:22px}
     .field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);font-weight:500;margin-bottom:8px}
-    .field input,.field textarea{width:100%;padding:13px 16px;border:1px solid #d8d3c8;background:var(--white);font-family:'Jost',sans-serif;font-size:14px;color:var(--body);border-radius:2px;transition:border-color .2s}
-    .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+    .field input,.field textarea,.field select{width:100%;padding:13px 16px;border:1px solid #d8d3c8;background:var(--white);font-family:'Jost',sans-serif;font-size:14px;color:var(--body);border-radius:2px;transition:border-color .2s}
+    .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold)}
     .field textarea{resize:vertical;min-height:140px;line-height:1.7}
     .field small{display:block;margin-top:6px;font-size:12px;color:#888}
     .submit-row{margin-top:8px}
@@ -176,8 +176,27 @@
         <input type="text" id="location" name="location" placeholder="e.g. Boulder, CO" required/>
       </div>
       <div class="field">
-        <label for="about">What do you want us to know about you? What is your experience in men's work and stepping into a space like this?</label>
-        <textarea id="about" name="about" required></textarea>
+        <label for="navigating">What are you currently navigating, confronting, or committed to transforming in your life?</label>
+        <textarea id="navigating" name="navigating" required></textarea>
+      </div>
+      <div class="field">
+        <label for="interest">Are you interested in&hellip;</label>
+        <select id="interest" name="interest" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Local, integrative brotherhood">Local, integrative brotherhood</option>
+          <option value="Co-Ed offerings with The Way of We">Co-Ed offerings with The Way of We</option>
+          <option value="Multi-day deep dives">Multi-day deep dives</option>
+          <option value="All the above">All the above</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="accountability">Are you willing to be challenged, held accountable, and called into deeper integrity by your brothers?</label>
+        <select id="accountability" name="accountability" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="I'm willing to explore what that means">I'm willing to explore what that means</option>
+        </select>
       </div>
       <input type="hidden" name="_subject" value="New Join the Brotherhood submission"/>
       <div class="submit-row">
