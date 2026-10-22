@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Now | Brotherhood of the Roots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--forest:#1a2e1a;--moss:#2d4a2d;--sage:#4a6741;--gold:#c9a84c;--cream:#f4f0e6;--white:#ffffff;--body:#2a2a2a;--light:#f8f6f1}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;font-weight:300;color:var(--body);background:var(--white);line-height:1.7}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,0.06)}
+    .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nav-brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4)}
+    .nav-brand span{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:.04em;color:var(--forest)}
+    .nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+    .nav-links a{font-size:13px;font-weight:400;letter-spacing:.08em;color:var(--body);text-decoration:none;transition:color .2s}
+    .nav-links a:hover{color:var(--sage)}
+    .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;width:36px;height:36px}
+    .nav-toggle span{display:block;width:100%;height:2px;background:var(--forest);border-radius:1px;transition:transform .2s ease,opacity .2s ease}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-cta{background:var(--forest)!important;color:var(--white)!important;padding:10px 24px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
+    .nav-cta:hover{background:var(--moss)!important}
+    .nav-donate{background:transparent!important;color:var(--forest)!important;border:1.5px solid var(--gold)!important;padding:9px 22px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;font-weight:500!important}
+    .nav-donate:hover{background:var(--gold)!important;color:var(--white)!important}
+    .btn{display:inline-block;padding:14px 36px;font-size:12px;letter-spacing:.14em;font-weight:500;text-decoration:none;border-radius:2px;transition:all .2s;font-family:'Jost',sans-serif;border:none;cursor:pointer}
+    .btn-gold{background:var(--gold);color:var(--forest)}
+    .btn-gold:hover{background:#b8952e}
+    .btn-dark{background:var(--forest);color:var(--cream)}
+    .btn-dark:hover{background:var(--moss)}
+    .btn-outline{border:1px solid rgba(244,240,230,.5);color:var(--cream)}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    section{padding:100px 48px}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .gold-rule{width:48px;height:2px;background:var(--gold);margin:0 auto 32px}
+    footer{background:var(--forest);padding:64px 48px;color:rgba(244,240,230,.6)}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
+    .footer-brand img{width:50px;height:50px;border-radius:50%;object-fit:cover;object-position:center top;margin-bottom:14px;display:block;border:1px solid rgba(201,168,76,.4)}
+    .footer-brand h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--cream);margin-bottom:12px}
+    .footer-brand p{font-size:13px;line-height:1.8;max-width:280px}
+    .footer-col h4{font-size:10px;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;text-transform:uppercase}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:13px;color:rgba(244,240,230,.6);text-decoration:none;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--gold)}
+    .footer-bottom{max-width:1100px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(244,240,230,.1);display:flex;justify-content:space-between;align-items:center;font-size:12px}
+    .ig-link{color:var(--gold);text-decoration:none}
+    .ig-link:hover{color:var(--cream)}
+    @media(max-width:768px){
+      nav{padding:0 20px}
+      .nav-toggle{display:flex}
+      .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 28px;border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 12px 24px rgba(0,0,0,.1);max-height:calc(100vh - 72px);overflow-y:auto}
+      .nav-links.open{display:flex}
+      .nav-links li{width:100%}
+      .nav-links a{display:block;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.05);font-size:14px}
+      .nav-links li:last-child a{border-bottom:none}
+      .nav-cta,.nav-donate{display:inline-block;margin:10px 0 0!important;text-align:center}
+      section{padding:72px 24px}
+      .footer-inner{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+    }
+
+    .page-hero{min-height:38vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+    .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,15,.35) 0%,rgba(15,28,15,.88) 100%)}
+    .page-hero-content{position:relative;z-index:2;padding:0 48px 56px;max-width:1100px;margin:0 auto;width:100%}
+    .page-eyebrow{font-size:10px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;display:block}
+    .page-hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,64px);font-weight:300;color:var(--cream);line-height:1.1}
+    .page-hero-content h1 em{font-style:italic;color:var(--gold)}
+    .page-hero-content p{font-size:14px;color:rgba(244,240,230,.78);margin-top:14px;max-width:520px}
+    .breadcrumb{font-size:12px;letter-spacing:.06em;color:rgba(244,240,230,.5);margin-bottom:18px;display:block}
+    .breadcrumb a{color:var(--gold);text-decoration:none}
+    .breadcrumb a:hover{color:var(--cream)}
+    .form-section{background:var(--light)}
+    .form-wrap{max-width:640px;margin:0 auto}
+    .form-note{font-size:14px;color:#666;line-height:1.8;margin-bottom:36px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media(max-width:640px){.form-row{grid-template-columns:1fr}}
+    .field{margin-bottom:22px}
+    .field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);font-weight:500;margin-bottom:8px}
+    .field input,.field textarea,.field select{width:100%;padding:13px 16px;border:1px solid #d8d3c8;background:var(--white);font-family:'Jost',sans-serif;font-size:14px;color:var(--body);border-radius:2px;transition:border-color .2s}
+    .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold)}
+    .field textarea{resize:vertical;min-height:140px;line-height:1.7}
+    .field small{display:block;margin-top:6px;font-size:12px;color:#888}
+    .submit-row{margin-top:8px}
+    .alt-contact{margin-top:44px;padding-top:32px;border-top:1px solid #e0dccf;font-size:14px;color:#666;line-height:1.9}
+    .alt-contact a{color:var(--sage);text-decoration:none;font-weight:500}
+    .alt-contact a:hover{color:var(--gold)}
+    .form-status{display:none;margin-top:20px;padding:14px 18px;border-radius:2px;font-size:14px}
+    .form-status.success{background:#e8f0e4;color:#2d4a2d;display:block}
+    .form-status.error{background:#f5e4e0;color:#8a3324;display:block}
+
+  </style>
+</head>
+<body><nav>
+  <a href="index.html" class="nav-brand">
+    <img src="images/index-1.png" alt="Brotherhood of the Roots"/>
+    <span>Brotherhood of the Roots</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#programs">Programs</a></li>
+    <li><a href="current-council-series.html">Council Series</a></li>
+    <li><a href="index.html#testimonials">Stories</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="join.html" class="nav-cta">Get Connected</a></li>
+    <li><a href="donate.html" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+<script>
+(function(){
+  var btn = document.getElementById('navToggle');
+  var menu = document.getElementById('navLinks');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+})();
+</script>
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/index-2.jpg')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Join Now</span>
+    <span class="page-eyebrow">Brotherhood of the Roots</span>
+    <h1>Join the <em>Brotherhood</em></h1>
+    <p>Tell us a bit about yourself and we'll be in touch about next steps.</p>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="section-inner form-wrap">
+    <div class="gold-rule" style="margin:0 0 28px 0"></div>
+    <p class="form-note">Fill out the form below to start your journey with us. We read every application personally, take your time and share as much as feels right.</p>
+
+    <form id="join-form" action="https://formspree.io/f/mjygnljk" method="POST">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required/>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required/>
+        </div>
+        <div class="field">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" name="birthday" required/>
+        </div>
+      </div>
+      <div class="field">
+        <label for="location">City &amp; State you live in</label>
+        <input type="text" id="location" name="location" placeholder="e.g. Boulder, CO" required/>
+      </div>
+      <div class="field">
+        <label for="navigating">What are you currently navigating, confronting, or committed to transforming in your life?</label>
+        <textarea id="navigating" name="navigating" required></textarea>
+      </div>
+      <div class="field">
+        <label for="interest">Are you interested in&hellip;</label>
+        <select id="interest" name="interest" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Local, integrative brotherhood">Local, integrative brotherhood</option>
+          <option value="Co-Ed offerings with The Way of We">Co-Ed offerings with The Way of We</option>
+          <option value="Multi-day deep dives">Multi-day deep dives</option>
+          <option value="All the above">All the above</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="accountability">Are you willing to be challenged, held accountable, and called into deeper integrity by your brothers?</label>
+        <select id="accountability" name="accountability" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="I'm willing to explore what that means">I'm willing to explore what that means</option>
+        </select>
+      </div>
+      <input type="hidden" name="_subject" value="New Join the Brotherhood submission"/>
+      <div class="submit-row">
+        <button type="submit" class="btn btn-gold">Get connected with BOTR</button>
+      </div>
+      <div id="form-status" class="form-status"></div>
+    </form>
+
+    <div class="alt-contact">
+      <p>Prefer to connect a different way? Email us at <a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a>, message us on <a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank">Instagram @brotherhoodoftheroots</a>, or <a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank">join our WhatsApp community</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/index-1.png" alt="Brotherhood of the Roots"/>
+      <h3>Brotherhood of the Roots</h3>
+      <p>Empowering men and women in community. Let's Root, Rise, and Remember together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#testimonials">Success Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank" class="ig-link">@brotherhoodoftheroots</a></li>
+        <li><a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a></li>
+        <li><a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank">Join our WhatsApp</a></li>
+        <li><a href="join.html" target="_blank">Join Now</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Brotherhood of the Roots. All rights reserved.</span>
+    <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram &nearr;</a>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('join-form');
+  const status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if(response.ok){
+        form.reset();
+        status.textContent = "Thank you, your application has been received. We'll be in touch soon.";
+        status.className = 'form-status success';
+      } else {
+        response.json().then(function(json){
+          status.textContent = (json.errors ? json.errors.map(function(e){return e.message}).join(', ') : "Something went wrong. Please email us directly at brotherhoodoftheroots@gmail.com.");
+          status.className = 'form-status error';
+        }).catch(function(){
+          status.textContent = "Something went wrong. Please email us directly at brotherhoodoftheroots@gmail.com.";
+          status.className = 'form-status error';
+        });
+      }
+    }).catch(function(){
+      status.textContent = "Something went wrong. Please email us directly at brotherhoodoftheroots@gmail.com.";
+      status.className = 'form-status error';
+    });
+  });
+</script>
+</body>
+</html>
