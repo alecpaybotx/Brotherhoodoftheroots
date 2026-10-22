@@ -1,0 +1,7 @@
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+
+# Explicitly tell Jekyll to include HTML files as static assets
+include: [".htaccess", "*.html"]
+keep_files: ["*.html"]
