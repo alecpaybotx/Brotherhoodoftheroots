@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Brotherhood of the Roots</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
 
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -81,6 +80,8 @@
     .intro-img::after{content:'';position:absolute;inset:-10px -10px 10px 10px;border:1px solid var(--gold);z-index:-1;opacity:.4}
     .roots-banner{background:var(--forest);text-align:center;padding:80px 48px}
     .roots-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:300;color:var(--cream);margin-bottom:28px;font-style:italic}
+    .roots-video{margin-top:40px;display:flex;justify-content:center}
+    .roots-video iframe{max-width:100%;height:auto;border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,0.3)}
     .programs-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,42px);font-weight:400;color:var(--forest);text-align:center;margin-bottom:56px}
     .programs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#e8e4dc}
     .program-card{background:var(--white);padding:48px 40px;border-left:3px solid transparent;transition:border-color .2s,background .2s;position:relative}
@@ -143,13 +144,15 @@
       .intro-img::after{display:none}
       .programs-grid{grid-template-columns:1fr}
       .t-grid{grid-template-columns:1fr}
+      .roots-video{margin-top:20px}
+      .roots-video iframe{width:100%;height:auto;aspect-ratio:16/9}
     }
 
   </style>
 </head>
 <body><nav>
   <a href="index.html" class="nav-brand">
-    <img src="images/index-1.png" alt="Brotherhood of the Roots"/>
+    <img src="images/index-1.png" alt="Brotherhood of the Roots">
     <span>Brotherhood of the Roots</span>
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -191,7 +194,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-eyebrow">Brotherhood of the Roots</p>
-    <h1>Rooted in Brotherhood<br/><em>Rising in Mastery</em></h1>
+    <h1>Rooted in Brotherhood<br><em>Rising in Mastery</em></h1>
     <p class="hero-sub">BOTR is where radical ownership meets relational intimacy. We help build a future where families thrive, communities flourish, and our ancestors' prayers are finally answered.</p>
     <a href="join.html" class="btn btn-gold">Join Now</a>
   </div>
@@ -205,7 +208,7 @@
       <a href="index.html#programs" class="btn btn-dark">Learn more</a>
     </div>
     <div class="intro-img">
-      <img src="images/img-7920-web.jpg" alt="Brotherhood gathering"/>
+      <img src="images/img-7920-web.jpg" alt="Brotherhood gathering">
     </div>
   </div>
 </section>
@@ -214,6 +217,9 @@
   <div class="section-inner">
     <div class="gold-rule"></div>
     <h2>Root, Rise, and Remember with us</h2>
+    <div class="roots-video">
+      <iframe width="560" height="315" src="https://drive.google.com/file/d/1OG40oFmmGQS_kQjfzqHXItE34fjvIS5o/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="border-radius:4px;"></iframe>
+    </div>
   </div>
 </section>
 
@@ -224,25 +230,25 @@
       <div class="program-card has-bg" style="background-image:url('images/mens-council-bg2.webp')">
         <h3><a href="mens-council.html">Men's Council</a></h3>
         <p>Each month, we gather at the legendary Starhouse in Boulder for a consistent space to speak truth, take ownership, and call one another forward. We hold each other accountable to live what we say, translating insight into action and intention into embodiment. This is how man sharpens man. Iron sharpens iron.</p>
-        <a href="mens-council.html" class="learn">Learn more &rarr;</a>
+        <a href="mens-council.html" class="learn">Learn more →</a>
         <a href="mens-council.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
       <div class="program-card has-bg" style="background-image:url('images/mens-council-bg.webp')">
         <h3><a href="coed-council.html">The Way of We | CO-ED Offerings</a></h3>
         <p>Our co-ed offerings explore the practice of polarity in masculine and feminine relations. This is where we bring brotherhood and sisterhood together in our collective kinship. Join us March 2027 for a deep dive into the village consciousness in Boulder, Colorado.</p>
-        <a href="coed-council.html" class="learn">Learn more &rarr;</a>
+        <a href="coed-council.html" class="learn">Learn more →</a>
         <a href="coed-council.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
       <div class="program-card has-bg card-facilitator" style="background-image:url('images/the-holder-2.png')">
         <h3><a href="mens-work-facilitation-training.html">Men's Work Facilitation Training</a></h3>
         <p>Many call themselves leaders, but few have cultivated the capacity to facilitate what emerges in the depths of human connection. If you are a man committed to leading in men's work, co ed spaces, or both, this advanced training is for you.</p>
-        <a href="mens-work-facilitation-training.html" class="learn">Learn more &rarr;</a>
+        <a href="mens-work-facilitation-training.html" class="learn">Learn more →</a>
         <a href="mens-work-facilitation-training.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
       <div class="program-card has-bg" style="background-image:url('coldplunge.jpg')">
         <h3><a href="elemental-nature-offerings.html">Rooted Elemental Offerings</a></h3>
         <p>Our culture is deeply rooted in relationship with the natural world. We gather seasonally in the sanctuary of nature to connect with the elements, honor our relationship with the land, and meet our more than human relatives through prayer and presence.</p>
-        <a href="elemental-nature-offerings.html" class="learn">Learn more &rarr;</a>
+        <a href="elemental-nature-offerings.html" class="learn">Learn more →</a>
         <a href="elemental-nature-offerings.html" class="card-cover" aria-hidden="true" tabindex="-1"></a>
       </div>
     </div>
@@ -254,22 +260,22 @@
     <h2 class="programs-title">Our Leaders</h2>
     <div class="leaders-preview-grid">
       <a href="leaders.html" class="leader-preview-card">
-        <img src="images/leaders-cody.jpg" alt="Mason Mostajo"/>
+        <img src="images/leaders-cody.jpg" alt="Mason Mostajo">
         <h3>Mason Mostajo</h3>
         <span class="role">Co Founder</span>
       </a>
       <a href="leaders.html" class="leader-preview-card">
-        <img src="images/leaders-alec.jpg" alt="Alec Vishal Rouben"/>
+        <img src="images/leaders-alec.jpg" alt="Alec Vishal Rouben">
         <h3>Alec Vishal Rouben</h3>
         <span class="role">Co Founder</span>
       </a>
       <a href="leaders.html" class="leader-preview-card">
-        <img src="images/leaders-mason.jpg" alt="Cody ThunderEagle Watts"/>
+        <img src="images/leaders-mason.jpg" alt="Cody ThunderEagle Watts">
         <h3>Cody ThunderEagle Watts</h3>
         <span class="role">Co-Owner</span>
       </a>
     </div>
-    <a href="leaders.html" class="learn-more">Meet the Leaders &rarr;</a>
+    <a href="leaders.html" class="learn-more">Meet the Leaders →</a>
   </div>
 </section>
 
@@ -277,42 +283,42 @@
   <div class="gallery-header"><p>Our Community</p></div>
   <div class="gallery-track">
     <div class="gallery-item">
-      <img src="images/index-4.jpg" alt="Men's Council"/>
+      <img src="images/index-4.jpg" alt="Men's Council">
       <a href="mens-council.html" class="gallery-link"></a>
       <div class="gallery-caption">Men's Council</div>
     </div>
     <div class="gallery-item">
-      <img src="images/index-5.jpg" alt="Sacred Ceremony"/>
+      <img src="images/index-5.jpg" alt="Sacred Ceremony">
       <a href="coed-council.html" class="gallery-link"></a>
       <div class="gallery-caption">Sacred Ceremony</div>
     </div>
     <div class="gallery-item">
-      <img src="images/index-6.jpg" alt="Embodiment Work"/>
+      <img src="images/index-6.jpg" alt="Embodiment Work">
       <a href="facilitation-training.html" class="gallery-link"></a>
       <div class="gallery-caption">Embodiment Work</div>
     </div>
     <div class="gallery-item">
-      <img src="images/index-7.jpg" alt="Brotherhood"/>
+      <img src="images/index-7.jpg" alt="Brotherhood">
       <a href="mens-council.html" class="gallery-link"></a>
       <div class="gallery-caption">Brotherhood</div>
     </div>
     <div class="gallery-item">
-      <img src="images/coed-ra-britt.jpg" alt="Co-Ed Relational Work"/>
+      <img src="images/coed-ra-britt.jpg" alt="Co-Ed Relational Work">
       <a href="coed-council.html" class="gallery-link"></a>
       <div class="gallery-caption">Co-Ed Relational Work</div>
     </div>
     <div class="gallery-item">
-      <img src="images/feather-and-sage.jpg" alt="Facilitation Training with Elders"/>
+      <img src="images/feather-and-sage.jpg" alt="Facilitation Training with Elders">
       <a href="mens-work-facilitation-training.html" class="gallery-link"></a>
       <div class="gallery-caption">Facilitation Training with Elders</div>
     </div>
     <div class="gallery-item">
-      <img src="images/nourishment.jpg" alt="Nourishment"/>
+      <img src="images/nourishment.jpg" alt="Nourishment">
       <a href="coed-council.html" class="gallery-link"></a>
       <div class="gallery-caption">Nourishment</div>
     </div>
     <div class="gallery-item">
-      <img src="images/index-2.jpg" alt="Remember"/>
+      <img src="images/index-2.jpg" alt="Remember">
       <a href="index.html" class="gallery-link"></a>
       <div class="gallery-caption">Remember</div>
     </div>
@@ -325,17 +331,17 @@
     <h2>What our Brothers and Sisters are saying</h2>
     <div class="t-grid">
       <div class="t-card">
-        <img src="images/index-1.png" alt="Ahva"/>
+        <img src="images/index-1.png" alt="Ahva">
         <blockquote>"As I stepped into this community, I found parts of myself I didn't know were missing."</blockquote>
         <cite>Ahva</cite><span class="role">Rhythm Sanctuary founder</span>
       </div>
       <div class="t-card">
-        <img src="images/index-1.png" alt="Joshua Miller"/>
+        <img src="images/index-1.png" alt="Joshua Miller">
         <blockquote>"Going to the Brotherhood of the Roots has been very valuable for me continuing my journey through Men's work, giving me a place to practice what I've already learned and discover more that is new. Having a place where I can be seen and bring my happiness, sadness, or anger and know that the Brotherhood can hold it, and keep it in the Circle is powerful. Trust the process and be yourself."</blockquote>
         <cite>Joshua Miller</cite>
       </div>
       <div class="t-card">
-        <img src="images/index-1.png" alt="Jacob F"/>
+        <img src="images/index-1.png" alt="Jacob F">
         <blockquote>"I used to get nervous in groups of men. This place changed everything about how I show up."</blockquote>
         <cite>Jacob F</cite><span class="role">Project Manager</span>
       </div>
@@ -351,13 +357,13 @@
     <h2>Join the Brotherhood</h2>
     <p>We'll be with you every step of the way.</p>
     <a href="join.html" class="btn btn-gold">Claim your seat</a>
-    <p style="margin-top:22px;margin-bottom:0"><a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank" style="color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.05em">Prefer WhatsApp? Join our community chat &rarr;</a></p>
+    <p style="margin-top:22px;margin-bottom:0"><a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank" style="color:var(--gold);text-decoration:none;font-size:13px;letter-spacing:.05em">Prefer WhatsApp? Join our community chat →</a></p>
   </div>
 </section>
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="images/index-1.png" alt="Brotherhood of the Roots"/>
+      <img src="images/index-1.png" alt="Brotherhood of the Roots">
       <h3>Brotherhood of the Roots</h3>
       <p>Empowering men and women in community. Let's Root, Rise, and Remember together.</p>
     </div>
@@ -381,9 +387,9 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 Brotherhood of the Roots. All rights reserved.</span>
-    <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram &nearr;</a>
+    <span>© 2026 Brotherhood of the Roots. All rights reserved.</span>
+    <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram ↗</a>
   </div>
 </footer>
-</body>
-</html>
+
+</body></html>
