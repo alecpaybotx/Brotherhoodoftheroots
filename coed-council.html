@@ -50,6 +50,13 @@
     .footer-bottom{max-width:1100px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(244,240,230,.1);display:flex;justify-content:space-between;align-items:center;font-size:12px}
     .ig-link{color:var(--gold);text-decoration:none}
     .ig-link:hover{color:var(--cream)}
+    .social-links{display:inline-flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .yt-link{display:inline-flex;align-items:center;gap:6px;color:var(--gold);text-decoration:none;vertical-align:middle}
+    .social-links .yt-link{min-width:32px;min-height:32px;justify-content:center}
+    .yt-link:hover{color:var(--cream)}
+    .yt-link svg{width:15px;height:15px;display:block;fill:currentColor;flex:none}
+    @media(max-width:768px){.social-links{justify-content:center}}
+
     @media(max-width:768px){
       nav{padding:0 20px}
       .nav-toggle{display:flex}
@@ -411,6 +418,8 @@
       <h4>Connect</h4>
       <ul>
         <li><a href="https://www.instagram.com/brotherhoodoftheroots/" target="_blank" class="ig-link">@brotherhoodoftheroots</a></li>
+        <li><a href="https://www.youtube.com/@BrotherhoodoftheRoots" target="_blank" rel="noopener" class="ig-link yt-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>YouTube</span></a></li>
+        <!-- Spotify: add a link here, beside YouTube, when the show URL exists. -->
         <li><a href="mailto:brotherhoodoftheroots@gmail.com">brotherhoodoftheroots@gmail.com</a></li>
         <li><a href="https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t" target="_blank">Join our WhatsApp</a></li>
         <li><a href="join.html" target="_blank">Join Now</a></li>
@@ -419,7 +428,11 @@
   </div>
   <div class="footer-bottom">
     <span>&copy; 2026 Brotherhood of the Roots. All rights reserved.</span>
-    <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram &nearr;</a>
+    <div class="social-links">
+      <a href="https://www.instagram.com/brotherhoodoftheroots/" class="ig-link" target="_blank">Instagram &nearr;</a>
+      <a href="https://www.youtube.com/@BrotherhoodoftheRoots" target="_blank" rel="noopener" class="ig-link yt-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      <!-- Spotify: add an icon link here when the show URL exists. -->
+    </div>
   </div>
 </footer>
 </body>
