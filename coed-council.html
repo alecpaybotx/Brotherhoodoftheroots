@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Way of We | Brotherhood of the Roots</title>
+  <title>The Way of We | Brotherhood of the Roots</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
 
@@ -109,6 +109,41 @@
     .breadcrumb{font-size:12px;letter-spacing:.06em;color:rgba(244,240,230,.5);margin-bottom:18px;display:block}
     .breadcrumb a{color:var(--gold);text-decoration:none}
     .breadcrumb a:hover{color:var(--cream)}
+    .expect{background:var(--white);text-align:center;scroll-margin-top:88px}
+    .expect .section-inner{max-width:1000px}
+    .expect-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-bottom:14px}
+    .expect h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.4vw,52px);font-weight:400;color:var(--forest);line-height:1.15;margin-bottom:18px}
+    .expect-lead{font-size:16px;color:#555;line-height:1.9;max-width:680px;margin:0 auto 48px}
+    .expect-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-bottom:56px;text-align:left}
+    .expect-card{background:var(--light);padding:32px 26px 28px;border-top:3px solid var(--gold)}
+    .expect-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--forest);margin-bottom:12px;line-height:1.2}
+    .expect-card p{font-size:15px;color:#555;line-height:1.8;margin:0}
+    .expect-card p + p{margin-top:14px}
+    .expect-flow{text-align:left;margin-bottom:56px}
+    .expect-flow h3,.expect-register h3,.expect-faq h3{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,34px);font-weight:400;color:var(--forest);margin-bottom:18px;text-align:center}
+    .expect-days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;list-style:none;margin:0}
+    .expect-days li{background:var(--forest);padding:26px 22px;min-width:0}
+    .expect-days li span{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .expect-days li strong{display:block;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--cream);margin-bottom:10px;line-height:1.15}
+    .expect-days li p{font-size:14px;color:rgba(244,240,230,.82);line-height:1.7;margin:0}
+    .expect-aside{max-width:680px;margin:22px auto 0;font-size:14px;color:#666;line-height:1.8;text-align:center}
+    .expect-register{margin-bottom:56px}
+    .expect-register-lead{font-size:15px;color:#555;line-height:1.85;max-width:640px;margin:0 auto 22px}
+    .expect-discount{max-width:640px;margin:0 auto 28px;padding:18px 24px;border:1px solid var(--gold);font-size:15px;line-height:1.7;color:var(--body)}
+    .expect-faq{text-align:left;max-width:720px;margin:0 auto}
+    .expect-faq details{border-bottom:1px solid rgba(26,46,26,.12);padding:16px 0}
+    .expect-faq summary{cursor:pointer;font-size:16px;font-weight:500;color:var(--forest);line-height:1.45;list-style:none;display:block;position:relative;padding-right:28px}
+    .expect-faq summary::-webkit-details-marker{display:none}
+    .expect-faq summary::after{content:"+";color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1;position:absolute;right:0;top:0}
+    .expect-faq details[open] summary::after{content:"\2013"}
+    .expect-faq details p{font-size:15px;color:#555;line-height:1.8;margin:12px 0 4px}
+    .expect-faq a{color:var(--sage);font-weight:500}
+    @media(max-width:768px){
+      .expect-grid,.expect-days{grid-template-columns:1fr}
+      .expect-lead{margin-bottom:36px}
+      .expect-card{padding:26px 22px 24px}
+      .expect-days li strong{font-size:26px}
+    }
 
   </style>
 </head>
@@ -154,7 +189,7 @@
   <div class="page-hero-bg" style="background-image:url('images/IMG_5225.jpg');background-position:center 42%"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
-    <span class="breadcrumb"><a href="index.html">Home</a> / Way of We</span>
+    <span class="breadcrumb"><a href="index.html">Home</a> / The Way of We</span>
     <span class="page-eyebrow">Brotherhood of the Roots</span>
     <h1>The Way of <em>We</em></h1>
   </div>
@@ -189,6 +224,92 @@
     <p style="max-width:560px;margin:0 auto 32px;padding:18px 24px;border:1px solid var(--gold);border-radius:2px;color:var(--cream);font-size:15px;line-height:1.7">Bring a friend or partner and both of you get $50 off your ticket. Ask us for the discount code &amp; save $100 between you and your party!<br>Message Alec or Mason and ask for the friend/partner discount code!</p>
     <a href="https://square.link/u/MD7L71Zy" target="_blank" class="btn btn-gold">Buy Ticket</a>
     <p style="margin-top:18px;font-size:12px;color:rgba(244,240,230,.6)">Opens in a new tab to complete your purchase.</p>
+    <p style="margin-top:16px"><a href="#what-to-expect" style="color:var(--gold);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none">What to Expect</a></p>
+  </div>
+</section>
+
+<!--
+  TODO(Alec): Details that are not in the repo. Nothing below this comment is shown on the page.
+  - Ticket price. The Square link is live, and the friend or partner discount is $50 off each ticket, but no full price is published in the site copy.
+  - Street address for Vali Soul Sanctuary, if it should be public. Check-in copy says details are shared directly as March gets closer.
+  - Which WhatsApp thread is for immersion check-in. confirmation-way-of-we.html uses https://chat.whatsapp.com/DQKnle6gGmq2y9EfwyeAWv?mode=gi_t and the rest of the site uses https://chat.whatsapp.com/C1fdUMUD5wP9dFSeGmWYpU?mode=gi_t
+  - Whether Saturday and Sunday include meals. The site only says to arrive Friday already nourished.
+  - Any required clothing or items beyond the evergreen line: water, a journal, and layers for the weather.
+  - Confirm that people new to Brotherhood of the Roots are welcome with no prerequisite. The page sells public tickets and does not state one. Change the newcomer line if prior council experience is expected.
+-->
+<section class="expect" id="what-to-expect" aria-labelledby="expect-heading">
+  <div class="section-inner">
+    <div class="gold-rule"></div>
+    <p class="expect-kicker">The Way of We Immersion</p>
+    <h2 id="expect-heading">What to Expect</h2>
+    <p class="expect-lead">The Way of We Immersion is three days for men and women at Vali Soul Sanctuary in Boulder, Colorado, March 5 through 7, 2027. We gather to practice conscious relationship, and to remember what becomes possible when we live as a village. Here is how the time is held, and how to arrive ready.</p>
+    <div class="expect-grid">
+      <article class="expect-card">
+        <h3>Who it is for</h3>
+        <p>This circle holds forty seats, half men and half women. Uncle Vincent Matoska facilitates, with a woman elder still to be announced. Across generations, we come together with elders and seasoned facilitators.</p>
+        <p>Newcomers are welcome. If this is your first time with Brotherhood of the Roots, you can begin here.</p>
+      </article>
+      <article class="expect-card">
+        <h3>What to bring and wear</h3>
+        <p>Bring water, a journal, and layers for the weather. Wear clothes you can sit in comfortably for a long circle.</p>
+        <p>Accommodations are not included, so arrange your own lodging.</p>
+      </article>
+      <article class="expect-card">
+        <h3>Arrival</h3>
+        <p>On Friday, March 5, arrive on site at 4pm. Ceremony opens at 4:30pm. Come already fed and well nourished. The evening container pauses at 8pm until we gather the following morning.</p>
+        <p>Check-in details for Vali Soul Sanctuary are shared with you directly as the gathering draws closer.</p>
+      </article>
+    </div>
+    <div class="expect-flow">
+      <h3>The shape of the three days</h3>
+      <ol class="expect-days">
+        <li>
+          <span>Friday, March 5</span>
+          <strong>4pm to 8pm</strong>
+          <p>Arrive at 4pm. Ceremony opens at 4:30pm. The container pauses at 8pm until the next morning.</p>
+        </li>
+        <li>
+          <span>Saturday, March 6</span>
+          <strong>9am to 5pm</strong>
+          <p>The gathering runs from 9am to 5pm.</p>
+        </li>
+        <li>
+          <span>Sunday, March 7</span>
+          <strong>9am to 3pm</strong>
+          <p>The gathering runs from 9am to 3pm.</p>
+        </li>
+      </ol>
+      <p class="expect-aside">These hours are for the March immersion. The Way of We Councils are the recurring three-hour gatherings at Vali Soul Sanctuary in Boulder. A separate Way of We gathering is also set for December 2, 2026.</p>
+    </div>
+    <div class="expect-register">
+      <h3>Reserve your seat</h3>
+      <p class="expect-register-lead">Buy your ticket through Square. The link opens in a new tab to complete your purchase.</p>
+      <p class="expect-discount">Bring a friend or partner and both of you get $50 off your ticket. Message Alec or Mason and ask for the friend and partner discount code. That is $100 saved between you.</p>
+      <a href="https://square.link/u/MD7L71Zy" target="_blank" class="btn btn-gold">Buy Ticket</a>
+    </div>
+    <div class="expect-faq">
+      <h3>Common questions</h3>
+      <details>
+        <summary>Are newcomers welcome?</summary>
+        <p>Yes. Men and women are invited, including people who are finding Brotherhood of the Roots for the first time. The circle is facilitated by Uncle Vincent Matoska, with a woman elder still to be announced.</p>
+      </details>
+      <details>
+        <summary>Is lodging included?</summary>
+        <p>Accommodations are not included. Arrange your own place to stay.</p>
+      </details>
+      <details>
+        <summary>How many seats are there?</summary>
+        <p>Forty seats, held evenly between men and women.</p>
+      </details>
+      <details>
+        <summary>How does the friend and partner discount work?</summary>
+        <p>Bring a friend or partner and both of you get $50 off your ticket. Message Alec or Mason and ask for the discount code.</p>
+      </details>
+      <details>
+        <summary>How do I register?</summary>
+        <p>Buy your ticket on Square. <a href="https://square.link/u/MD7L71Zy" target="_blank">Open the checkout</a>. It opens in a new tab.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -197,7 +318,7 @@
   <div class="gold-rule"></div>
   <h2>Reserve Your Seat in the Way of We</h2>
   <!-- PIN: once live, tie in the poster and the Actualize enrollment link here -->
-  <h3>Way of We Gathering</h3>
+  <h3>The Way of We Gathering</h3>
   <p>December 2, 2026</p>
   <a href="https://app.actualize.earth/brotherhoodoftherootswayofwe?referrer=UU8M0XDRHSIJ" class="btn btn-gold">Reserve Your Seat</a>
 </section>
