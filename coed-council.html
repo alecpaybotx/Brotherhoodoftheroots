@@ -138,10 +138,30 @@
     .expect-faq details[open] summary::after{content:"\2013"}
     .expect-faq details p{font-size:15px;color:#555;line-height:1.8;margin:12px 0 4px}
     .expect-faq a{color:var(--sage);font-weight:500}
+    .expect-guard{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin:0 0 56px;text-align:left}
+    .expect-consent{background:var(--forest);padding:36px 32px}
+    .expect-consent .expect-label,.expect-care .expect-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+    .expect-consent .expect-label{color:var(--gold)}
+    .expect-consent h3{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.2vw,38px);font-weight:400;color:var(--cream);line-height:1.2;margin-bottom:16px}
+    .expect-consent p{font-size:16px;line-height:1.8;color:rgba(244,240,230,.9);margin:0}
+    .expect-care{background:var(--light);border-top:3px solid var(--gold);padding:36px 32px}
+    .expect-care .expect-label{color:var(--sage)}
+    .expect-care h3{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,32px);font-weight:600;color:var(--forest);line-height:1.25;margin-bottom:16px}
+    .expect-care p{font-size:15px;color:#555;line-height:1.8;margin:0}
+    .expect-practices{margin-bottom:56px;text-align:left}
+    .expect-practices > h3{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,34px);font-weight:400;color:var(--forest);margin-bottom:14px;text-align:center}
+    .expect-practice-lead{font-size:15px;color:#555;line-height:1.85;max-width:640px;margin:0 auto 28px;text-align:center}
+    .expect-practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .expect-practice{background:var(--light);padding:28px 26px 26px;border-top:3px solid var(--gold);min-width:0}
+    .expect-practice h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--forest);line-height:1.25;margin-bottom:10px}
+    .expect-practice p{font-size:15px;color:#555;line-height:1.8;margin:0}
+    .expect-practice-wide{grid-column:1 / -1}
     @media(max-width:768px){
-      .expect-grid,.expect-days{grid-template-columns:1fr}
+      .expect-grid,.expect-days,.expect-guard,.expect-practice-grid{grid-template-columns:1fr}
+      .expect-practice-wide{grid-column:auto}
       .expect-lead{margin-bottom:36px}
-      .expect-card{padding:26px 22px 24px}
+      .expect-card,.expect-practice{padding:26px 22px 24px}
+      .expect-consent,.expect-care{padding:28px 22px}
       .expect-days li strong{font-size:26px}
     }
 
@@ -243,6 +263,44 @@
     <p class="expect-kicker">The Way of We Immersion</p>
     <h2 id="expect-heading">What to Expect</h2>
     <p class="expect-lead">The Way of We Immersion is three days for men and women at Vali Soul Sanctuary in Boulder, Colorado, March 5 through 7, 2027. We gather to practice conscious relationship, and to remember what becomes possible when we live as a village. Here is how the time is held, and how to arrive ready.</p>
+    <div class="expect-guard">
+      <article class="expect-consent">
+        <p class="expect-label">Consent and agency</p>
+        <h3>You never have to do anything you do not want to do</h3>
+        <p>Expect to be confronted, while what is true for you is always honored. The circle can meet you directly. It does not override you. Your no is as welcome here as your yes.</p>
+      </article>
+      <article class="expect-care">
+        <p class="expect-label">Trauma-informed safety</p>
+        <h3>The space is held with care</h3>
+        <p>This gathering is held with trauma-informed care. Participation is always by choice. You decide what you take part in, and you are free to stay with what is true for you.</p>
+      </article>
+    </div>
+    <div class="expect-practices">
+      <h3>What the days hold</h3>
+      <p class="expect-practice-lead">Inside that consent, The Way of We moves through a few kinds of work. We do them together.</p>
+      <div class="expect-practice-grid">
+        <article class="expect-practice">
+          <h3>Psychosomatic process work</h3>
+          <p>Men and women are invited to share the wounds and traumas they carry, and to let the body take part in the healing. We experience somatic healing and move through these processes as a group, in one another's presence.</p>
+        </article>
+        <article class="expect-practice">
+          <h3>Song, dance, and somatic expression</h3>
+          <p>Song, dance, and the language of the body belong in the circle. There is room to express what words alone cannot hold, and to let sound and movement carry what is moving in us.</p>
+        </article>
+        <article class="expect-practice">
+          <h3>Breathwork</h3>
+          <p>Breathwork is part of the gathering. We use the breath to arrive in the body, to steady ourselves, and to open to the process we are in together.</p>
+        </article>
+        <article class="expect-practice">
+          <h3>Relational work</h3>
+          <p>Relationship is the practice. We work with authentic relating: honesty between men and women, the courage to be seen, and the skill of meeting one another in real time.</p>
+        </article>
+        <article class="expect-practice expect-practice-wide">
+          <h3>The village</h3>
+          <p>The Way of We is a way to live in community. These days are a practice of the village: belonging with one another, and remembering that we are not meant to heal alone.</p>
+        </article>
+      </div>
+    </div>
     <div class="expect-grid">
       <article class="expect-card">
         <h3>Who it is for</h3>
@@ -251,7 +309,7 @@
       </article>
       <article class="expect-card">
         <h3>What to bring and wear</h3>
-        <p>Bring water, a journal, and layers for the weather. Wear clothes you can sit in comfortably for a long circle.</p>
+        <p>Bring water, a journal, and layers for the weather. Wear clothes you can sit in for a long circle, and move in when the work turns to song, dance, or breath.</p>
         <p>Accommodations are not included, so arrange your own lodging.</p>
       </article>
       <article class="expect-card">
@@ -289,6 +347,10 @@
     </div>
     <div class="expect-faq">
       <h3>Common questions</h3>
+      <details>
+        <summary>Will I have to participate in everything?</summary>
+        <p>No. Expect to be confronted, while what is true for you is always honored. You never have to do anything you do not want to do. The space is held with trauma-informed care, and participation is always by choice.</p>
+      </details>
       <details>
         <summary>Are newcomers welcome?</summary>
         <p>Yes. Men and women are invited, including people who are finding Brotherhood of the Roots for the first time. The circle is facilitated by Uncle Vincent Matoska, with a woman elder still to be announced.</p>
